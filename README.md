@@ -1,0 +1,4 @@
+QRegexEditor
+============
+
+Regular expression editor

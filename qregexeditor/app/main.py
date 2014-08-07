@@ -3,14 +3,11 @@ Application entry point
 """
 import sys
 from pyqode.core.qt import QtWidgets
-from qregexeditor.api import RegexEditorWidget
+from .main_window import MainWindow
 
 
 def main():
     app = QtWidgets.QApplication(sys.argv)
-    window = QtWidgets.QMainWindow()
-    window.setWindowTitle("QRegexEditor")
-    editor = RegexEditorWidget()
-    window.setCentralWidget(editor)
+    window = MainWindow()
     window.show()
     app.exec_()

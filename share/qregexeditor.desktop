@@ -1,0 +1,10 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Encoding=UTF-8
+Name=QRegexEditor
+Comment=Simple regular expression editor
+Exec=QRegexEditor
+Terminal=false
+Type=Application
+Icon=/usr/share/pixmaps/qregexeditor.png
+Categories=Development;

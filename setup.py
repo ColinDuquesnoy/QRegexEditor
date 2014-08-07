@@ -20,27 +20,26 @@ def read_version():
 requirements = ['pyqode.core']
 
 
-# # Data files to install
-# data_files = [
-#     ('share/applications/', ['share/gtedit.desktop']),
-#     ('share/pixmaps/', ['forms/rc/gtedit.png']),
-#     ('share/gtedit', ['share/libraries.zip'])
-# ]
+# Data files to install
+data_files = [
+    ('share/applications/', ['share/qregexeditor.desktop']),
+    ('share/pixmaps/', ['share/qregexeditor.png'])
+]
 
 
 setup(
     name='QRegexEditor',
     version=read_version(),
     packages=find_packages(),
-    # data_files=data_files,
+    data_files=data_files,
     author='Colin Duquesnoy',
     author_email='c.duquesnoy@sirmogames.com',
     description='PyQt regex editor',
     install_requires=requirements,
     cmdclass=cmdclass,
-    # entry_points={
-    #     'gui_scripts': [
-    #         'QRegexEditor = qregexeditor.app.main:main'
-    #     ]
-    # }
+    entry_points={
+        'gui_scripts': [
+            'QRegexEditor = qregexeditor.app.main:main'
+        ]
+    }
 )

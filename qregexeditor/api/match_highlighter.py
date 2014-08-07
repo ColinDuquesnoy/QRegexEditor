@@ -10,10 +10,13 @@ class MatchHighlighter(QtGui.QSyntaxHighlighter):
         self._format.setBackground(QtGui.QBrush(QtGui.QColor('#bbfcbb')))
 
     def highlightBlock(self, text):
-        if self.prog:
+        if self.prog and text:
             match = self.prog.search(text)
-            while match:
+            if match:
                 start, end = match.span()
-                self.setFormat(start, end - start, self._format)
-                match = self.prog.search(text, match.end())
+                while match and end > start:
+                    self.setFormat(start, end - start, self._format)
+                    match = self.prog.search(text, match.end())
+                    if match:
+                        start, end = match.span()
 

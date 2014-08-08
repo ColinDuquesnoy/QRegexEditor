@@ -11,12 +11,6 @@ class MatchHighlighter(QtGui.QSyntaxHighlighter):
 
     def highlightBlock(self, text):
         if self.prog and text:
-            match = self.prog.search(text)
-            if match:
-                start, end = match.span()
-                while match and end > start:
-                    self.setFormat(start, end - start, self._format)
-                    match = self.prog.search(text, match.end())
-                    if match:
-                        start, end = match.span()
-
+            for m in self.prog.finditer(text):
+                start, end = m.span()
+                self.setFormat(start, end - start, self._format)

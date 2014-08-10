@@ -18,7 +18,7 @@ Dependencies
 ------------
   - python 3
   - PyQt5 or PySide or PyQt4
-  - pyqode.core
+  - pyqode.qt
 
 
 Using the widget in a custom PyQt application

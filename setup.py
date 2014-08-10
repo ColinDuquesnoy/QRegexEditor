@@ -17,7 +17,7 @@ def read_version():
                 return l.split("=")[1].strip().replace('"', "")
 
 
-requirements = ['pyqode.core']
+requirements = ['pyqode.qt']
 
 
 # Data files to install

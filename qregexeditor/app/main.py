@@ -2,7 +2,7 @@
 Application entry point
 """
 import sys
-from pyqode.core.qt import QtWidgets
+from pyqode.qt import QtWidgets
 from .main_window import MainWindow
 
 

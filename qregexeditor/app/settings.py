@@ -2,7 +2,7 @@
 This module contains the code for accessing the application
 settings
 """
-from pyqode.core.qt import QtCore
+from pyqode.qt import QtCore
 
 
 class Settings():

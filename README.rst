@@ -8,6 +8,14 @@ You can use QRegexEditor as a standalone application but also as a widget
 in your own PyQt/PySide application.
 
 
+The tool has been inspired by:
+
+  - rubular: http://rubular.com/
+  - pythex: https://pythex.org/
+
+
+
+
 Installation
 ------------
 

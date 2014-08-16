@@ -1,15 +1,16 @@
 QRegexEditor
 ============
 
-QRegexEditor is a simple regular expression editor written in Python 3 and
+QRegexEditor is a **simple** regular expression editor written in Python 3 and
 PyQt.
 
 You can use QRegexEditor as a standalone application but also as a widget
-in your own Qt application.
-
+in your own PyQt/PySide application.
 
 Installation
 ------------
+
+::
 
 pip3 install qregexeditor
 

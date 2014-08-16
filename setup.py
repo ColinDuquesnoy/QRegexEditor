@@ -14,7 +14,8 @@ def read_version():
         lines = f.read().splitlines()
         for l in lines:
             if "__version__" in l:
-                return l.split("=")[1].strip().replace('"', "")
+                return l.split("=")[1].strip().replace('"', "").replace(
+                    "'", '')
 
 
 requirements = ['pyqode.qt']

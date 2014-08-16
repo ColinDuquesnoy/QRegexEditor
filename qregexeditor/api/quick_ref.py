@@ -1,7 +1,7 @@
 """
 Contains the quick reference widget
 """
-from pyqode.core.qt import QtWidgets
+from pyqode.qt import QtWidgets
 from .forms import quick_ref_ui
 
 class QuickRefWidget(QtWidgets.QWidget):

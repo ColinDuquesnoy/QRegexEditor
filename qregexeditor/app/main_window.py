@@ -1,4 +1,4 @@
-from pyqode.core.qt import QtWidgets, QtCore
+from pyqode.qt import QtWidgets, QtCore
 from qregexeditor.app.forms import main_window_ui
 from qregexeditor.app.settings import Settings
 from qregexeditor import __version__

@@ -1,5 +1,5 @@
-QRegexEditor
-============
+About
+-----
 
 QRegexEditor is a **simple** regular expression editor written in Python 3 and
 PyQt.
@@ -7,20 +7,29 @@ PyQt.
 You can use QRegexEditor as a standalone application but also as a widget
 in your own PyQt/PySide application.
 
+
+The tool has been inspired by:
+
+  - rubular: http://rubular.com/
+  - pythex: https://pythex.org/
+
+
+
+
 Installation
 ------------
 
 ::
 
-pip3 install qregexeditor
+    pip3 install qregexeditor
 
 
 Dependencies
 ------------
-  - python 3
-  - PyQt5 or PySide or PyQt4
-  - pyqode.qt
 
+- python 3
+- PyQt5 or PySide or PyQt4
+- pyqode.qt
 
 Using the widget in a custom PyQt application
 ---------------------------------------------

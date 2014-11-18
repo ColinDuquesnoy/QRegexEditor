@@ -4,7 +4,7 @@ from pyqode.qt import QtGui
 
 class MatchHighlighter(QtGui.QSyntaxHighlighter):
     def __init__(self, document):
-        super().__init__(document)
+        super(MatchHighlighter, self).__init__(document)
         self.prog = None
         self._format = QtGui.QTextCharFormat()
         self._format.setBackground(QtGui.QBrush(QtGui.QColor('#bbfcbb')))

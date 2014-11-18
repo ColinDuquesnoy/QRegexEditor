@@ -6,7 +6,7 @@ from qregexeditor import __version__
 
 class MainWindow(QtWidgets.QMainWindow):
     def __init__(self):
-        super().__init__()
+        super(MainWindow, self).__init__()
         self.ui = main_window_ui.Ui_MainWindow()
         self.ui.setupUi(self)
         self.setWindowTitle('QRegexEditor v.%s' % __version__)

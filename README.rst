@@ -1,7 +1,7 @@
 About
 -----
 
-QRegexEditor is a **simple** regular expression editor written in Python 3 and
+QRegexEditor is a **simple** regular expression editor written in Python and
 PyQt.
 
 You can use QRegexEditor as a standalone application but also as a widget
@@ -14,20 +14,18 @@ The tool has been inspired by:
   - pythex: https://pythex.org/
 
 
-
-
 Installation
 ------------
 
 ::
 
-    pip3 install qregexeditor
+    pip install qregexeditor --upgrade
 
 
 Dependencies
 ------------
 
-- python 3
+- python (2.7 or >= 3.2)
 - PyQt5 or PySide or PyQt4
 - pyqode.qt
 

@@ -63,7 +63,7 @@ class RegexEditorWidget(QtWidgets.QWidget):
         self.ui.checkBoxQuickRef.setChecked(value)
 
     def __init__(self, parent=None):
-        super().__init__(parent)
+        super(RegexEditorWidget, self).__init__(parent)
         self.ui = editor_ui.Ui_Form()
         self.ui.setupUi(self)
         self.ui.lblError.hide()

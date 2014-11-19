@@ -2,7 +2,7 @@
 Contains the quick reference widget
 """
 import re
-from pyqode.qt import QtWidgets
+from pyqode.qt import QtCore, QtWidgets
 from .forms import quick_ref_ui
 
 class QuickRefWidget(QtWidgets.QWidget):
@@ -11,6 +11,23 @@ class QuickRefWidget(QtWidgets.QWidget):
         self.ui = quick_ref_ui.Ui_Form()
         self.ui.setupUi(self)
         self._fix_default_font_size()
+        self.ui.textEditQuickRef.setContextMenuPolicy(
+            QtCore.Qt.CustomContextMenu)
+        self.ui.textEditQuickRef.customContextMenuRequested.connect(
+            self._show_context_menu)
+        self.context_menu = self.ui.textEditQuickRef.createStandardContextMenu()
+        self.context_menu.addSeparator()
+        action = self.context_menu.addAction('Zoom in')
+        action.setShortcut('Ctrl+i')
+        action.triggered.connect(self.ui.textEditQuickRef.zoomIn)
+        self.addAction(action)
+        action = self.context_menu.addAction('Zoom out')
+        action.setShortcut('Ctrl+o')
+        self.addAction(action)
+        action.triggered.connect(self.ui.textEditQuickRef.zoomOut)
+
+    def _show_context_menu(self, pos):
+        self.context_menu.exec_(self.ui.textEditQuickRef.mapToGlobal(pos))
 
     def _fix_default_font_size(self):
         # remove fixed font size to allow the user to zoom in/out using

@@ -17,10 +17,13 @@ The tool has been inspired by:
 Installation
 ------------
 
-::
+First install the package from pypi::
 
     pip install qregexeditor --upgrade
 
+Then you can run the application::
+
+    QRegexEditor
 
 Dependencies
 ------------

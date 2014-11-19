@@ -1,6 +1,7 @@
 """
 Contains the quick reference widget
 """
+import re
 from pyqode.qt import QtWidgets
 from .forms import quick_ref_ui
 
@@ -9,3 +10,14 @@ class QuickRefWidget(QtWidgets.QWidget):
         super(QuickRefWidget, self).__init__(parent)
         self.ui = quick_ref_ui.Ui_Form()
         self.ui.setupUi(self)
+        self._fix_default_font_size()
+
+    def _fix_default_font_size(self):
+        # remove fixed font size to allow the user to zoom in/out using
+        # Ctrl+Mouse Wheel
+        # Note: Zooming into HTML documents only works if the font-size is not
+        # set to a fixed size.
+        # (source: http://qt-project.org/doc/qt-5/qtextedit.html)
+        html = self.ui.textEditQuickRef.toHtml()
+        html = re.sub('font-size:\d+pt;', '', html)
+        self.ui.textEditQuickRef.setHtml(html)

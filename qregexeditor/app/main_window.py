@@ -16,6 +16,8 @@ class MainWindow(QtWidgets.QMainWindow):
         if self._settings.window_state:
             self.restoreState(self._settings.window_state)
         self.ui.dockWidget.setVisible(self._settings.show_quick_ref)
+        self.ui.dockWidget.visibilityChanged.connect(
+            self.ui.editor.ui.checkBoxQuickRef.setChecked)
         self.ui.editor.quick_ref_checked = self._settings.show_quick_ref
         self.ui.editor.compile_flags = self._settings.compile_flags
         self.ui.editor.regex = self._settings.regex

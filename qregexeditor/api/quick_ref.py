@@ -11,6 +11,19 @@ class QuickRefWidget(QtWidgets.QWidget):
         self.ui = quick_ref_ui.Ui_Form()
         self.ui.setupUi(self)
         self._fix_default_font_size()
+        self._setup_context_menu()
+
+    def _fix_default_font_size(self):
+        # remove fixed font size to allow the user to zoom in/out using
+        # Ctrl+Mouse Wheel
+        # Note: Zooming into HTML documents only works if the font-size is not
+        # set to a fixed size.
+        # (source: http://qt-project.org/doc/qt-5/qtextedit.html)
+        html = self.ui.textEditQuickRef.toHtml()
+        html = re.sub('font-size:\d+pt;', '', html)
+        self.ui.textEditQuickRef.setHtml(html)
+
+    def _setup_context_menu(self):
         self.ui.textEditQuickRef.setContextMenuPolicy(
             QtCore.Qt.CustomContextMenu)
         self.ui.textEditQuickRef.customContextMenuRequested.connect(
@@ -28,13 +41,3 @@ class QuickRefWidget(QtWidgets.QWidget):
 
     def _show_context_menu(self, pos):
         self.context_menu.exec_(self.ui.textEditQuickRef.mapToGlobal(pos))
-
-    def _fix_default_font_size(self):
-        # remove fixed font size to allow the user to zoom in/out using
-        # Ctrl+Mouse Wheel
-        # Note: Zooming into HTML documents only works if the font-size is not
-        # set to a fixed size.
-        # (source: http://qt-project.org/doc/qt-5/qtextedit.html)
-        html = self.ui.textEditQuickRef.toHtml()
-        html = re.sub('font-size:\d+pt;', '', html)
-        self.ui.textEditQuickRef.setHtml(html)

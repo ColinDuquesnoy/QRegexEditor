@@ -1,4 +1,5 @@
 from setuptools import setup, find_packages
+import sys
 try:
     from pyqt_distutils.build_ui import build_ui
     cmdclass = {'build_ui': build_ui}
@@ -22,10 +23,13 @@ requirements = ['pyqode.qt']
 
 
 # Data files to install
-data_files = [
-    ('share/applications/', ['share/qregexeditor.desktop']),
-    ('share/pixmaps/', ['share/qregexeditor.png'])
-]
+if sys.platform == 'win32':
+    data_files = []
+else:
+    data_files = [
+        ('share/applications/', ['share/qregexeditor.desktop']),
+        ('share/pixmaps/', ['share/qregexeditor.png'])
+    ]
 
 
 setup(

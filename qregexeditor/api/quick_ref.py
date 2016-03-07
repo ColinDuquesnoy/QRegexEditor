@@ -2,8 +2,9 @@
 Contains the quick reference widget
 """
 import re
-from pyqode.qt import QtCore, QtWidgets
+from qregexeditor.qt import QtCore, QtWidgets
 from .forms import quick_ref_ui
+
 
 class QuickRefWidget(QtWidgets.QWidget):
     def __init__(self, parent=None):

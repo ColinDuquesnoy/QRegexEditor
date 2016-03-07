@@ -1,13 +1,12 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file '/home/colin/Development/QRegexEditor/forms/main_window.ui'
+# Form implementation generated from reading ui file 'C:\Dev\QRegexEditor\forms/main_window.ui'
 #
-# Created: Thu Aug  7 10:35:00 2014
-#      by: PyQt5 UI code generator 5.3.1
+# Created by: PyQt5 UI code generator 5.5.1
 #
 # WARNING! All changes made in this file will be lost!
 
-from pyqode.qt import QtCore, QtGui, QtWidgets
+from qregexeditor.qt import QtCore, QtGui, QtWidgets
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -53,5 +52,5 @@ class Ui_MainWindow(object):
         MainWindow.setWindowTitle(_translate("MainWindow", "QRegexEditor"))
         self.dockWidget.setWindowTitle(_translate("MainWindow", "Quick reference"))
 
-from qregexeditor.api import RegexEditorWidget, QuickRefWidget
+from qregexeditor.api import QuickRefWidget, RegexEditorWidget
 from . import qregexeditor_rc

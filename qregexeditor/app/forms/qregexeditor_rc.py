@@ -2,12 +2,11 @@
 
 # Resource object code
 #
-# Created: Sat Aug 16 18:00:35 2014
-#      by: The Resource Compiler for PyQt (Qt v5.3.1)
+# Created by: The Resource Compiler for PyQt5 (Qt v5.5.1)
 #
 # WARNING! All changes made in this file will be lost!
 
-from pyqode.qt import QtCore
+from qregexeditor.qt import QtCore
 
 qt_resource_data = b"\
 \x00\x00\x61\x7e\

@@ -3,13 +3,16 @@ This module contains the editor widget implementation.
 """
 import re
 import sre_constants
-from pyqode.qt import QtCore, QtGui, QtWidgets
+from qregexeditor.qt import QtCore, QtGui, QtWidgets
 from .forms import editor_ui
 from .match_highlighter import MatchHighlighter
 
 
 class RegexEditorWidget(QtWidgets.QWidget):
-    quick_ref_requested = QtCore.Signal(int)
+    try:
+        quick_ref_requested = QtCore.Signal(int)
+    except AttributeError:
+        quick_ref_requested = QtCore.pyqtSignal(int)
 
     @property
     def string(self):

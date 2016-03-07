@@ -1,5 +1,5 @@
 import re
-from pyqode.qt import QtGui
+from qregexeditor.qt import QtGui
 
 
 class MatchHighlighter(QtGui.QSyntaxHighlighter):

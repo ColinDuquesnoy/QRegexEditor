@@ -1,13 +1,12 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file '/home/colin/Development/QRegexEditor/forms/editor.ui'
+# Form implementation generated from reading ui file 'C:\Dev\QRegexEditor\forms/editor.ui'
 #
-# Created: Thu Aug  7 11:06:54 2014
-#      by: PyQt5 UI code generator 5.3.1
+# Created by: PyQt5 UI code generator 5.5.1
 #
 # WARNING! All changes made in this file will be lost!
 
-from pyqode.qt import QtCore, QtGui, QtWidgets
+from qregexeditor.qt import QtCore, QtGui, QtWidgets
 
 class Ui_Form(object):
     def setupUi(self, Form):
@@ -24,7 +23,6 @@ class Ui_Form(object):
         self.lblError = QtWidgets.QLabel(self.groupBox)
         self.lblError.setStyleSheet("color: #FF0000;")
         self.lblError.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
-        self.lblError.setContentsMargins(5, 5, 5, 5)
         self.lblError.setObjectName("lblError")
         self.gridLayout.addWidget(self.lblError, 2, 0, 1, 1)
         self.horizontalLayout_2 = QtWidgets.QHBoxLayout()

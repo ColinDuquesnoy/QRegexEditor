@@ -2,7 +2,7 @@
 This module contains the code for accessing the application
 settings
 """
-from pyqode.qt import QtCore
+from qregexeditor.qt import QtCore
 
 
 class Settings():

@@ -19,7 +19,7 @@ def read_version():
                     "'", '')
 
 
-requirements = ['pyqode.qt']
+requirements = []
 
 
 # Data files to install
@@ -49,7 +49,9 @@ setup(
     entry_points={
         'gui_scripts': [
             'QRegexEditor = qregexeditor.app.main:main'
-        ]
+        ],
+        'pyqt_distutils_hooks': [
+            'fix_qt_imports = qregexeditor._hooks:fix_qt_imports']
     },
     classifiers=[
         'Development Status :: 5 - Production/Stable',
@@ -63,6 +65,7 @@ setup(
         'Programming Language :: Python :: 3.2',
         'Programming Language :: Python :: 3.3',
         'Programming Language :: Python :: 3.4',
+        'Programming Language :: Python :: 3.5',
         'Topic :: Software Development :: Libraries :: Application Frameworks',
         'Topic :: Software Development :: Widget Sets',
     ]

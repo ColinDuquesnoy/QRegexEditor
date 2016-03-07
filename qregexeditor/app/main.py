@@ -2,8 +2,8 @@
 Application entry point
 """
 import sys
-from pyqode.qt import QtWidgets
-from .main_window import MainWindow
+from qregexeditor.qt import QtWidgets
+from qregexeditor.app.main_window import MainWindow
 
 
 def main():
@@ -11,3 +11,7 @@ def main():
     window = MainWindow()
     window.show()
     app.exec_()
+
+
+if __name__ == '__main__':
+    main()

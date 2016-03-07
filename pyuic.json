@@ -17,8 +17,9 @@
             "qregexeditor/app/forms"
         ]
     ],
-    "pyrcc": "pyqode-rcc",
+    "pyrcc": "pyrcc5",
     "pyrcc_options": "",
-    "pyuic": "pyqode-uic",
-    "pyuic_options": "--from-import"
+    "pyuic": "pyuic5",
+    "pyuic_options": "--from-import",
+    "hooks": ["fix_qt_imports"]
 }

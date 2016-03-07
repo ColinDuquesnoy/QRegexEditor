@@ -30,7 +30,6 @@ Dependencies
 
 - python (2.7 or >= 3.2)
 - PyQt5 or PySide or PyQt4
-- pyqode.qt
 
 Using the widget in a custom PyQt application
 ---------------------------------------------
